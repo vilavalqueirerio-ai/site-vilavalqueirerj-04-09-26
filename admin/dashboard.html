@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Painel - Vila Valqueire RJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css?v=1">
+</head>
+<body>
+    <header class="admin-topbar">
+        <div class="admin-brand">
+            <span class="login-badge"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="login-brand">Painel <strong>Vila ValqueireRJ</strong></span>
+        </div>
+        <nav class="admin-actions">
+            <a href="#" id="viewSite" class="link-btn"><i class="fas fa-external-link-alt"></i> Ver site</a>
+            <button id="logoutBtn" class="link-btn danger"><i class="fas fa-sign-out-alt"></i> Sair</button>
+        </nav>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <button class="tab-btn active" data-tab="cores"><i class="fas fa-palette"></i> Cores</button>
+            <button class="tab-btn" data-tab="slider"><i class="fas fa-images"></i> Slider de Publicidade</button>
+            <button class="tab-btn" data-tab="banner"><i class="fas fa-flag"></i> Banner</button>
+            <button class="tab-btn" data-tab="acesso"><i class="fas fa-key"></i> Acesso &amp; Ajuda</button>
+        </aside>
+
+        <main class="admin-content">
+            <div class="toast" id="toast"></div>
+
+            <!-- CORES -->
+            <section class="tab-panel active" id="tab-cores">
+                <h2><i class="fas fa-palette"></i> Cores do site</h2>
+                <p>Escolha as cores principais. O gradiente do site é montado automaticamente a partir delas.</p>
+                <div class="color-grid" id="colorGrid"></div>
+                <div class="preview-card">
+                    <div class="preview-title">Pré-visualização</div>
+                    <div class="preview-bar" id="previewBar"></div>
+                    <div class="preview-buttons">
+                        <span class="preview-btn solid">Botão</span>
+                        <span class="preview-btn soft">Botão</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDER -->
+            <section class="tab-panel" id="tab-slider">
+                <h2><i class="fas fa-images"></i> Slider de Publicidade</h2>
+                <p>Edite os slides que aparecem abaixo do destaque inicial. Cada slide tem ícone (classe Font Awesome), título, descrição e texto do botão.</p>
+                <div id="sliderRows"></div>
+                <button class="btn btn-ghost btn-sm" id="addSlideBtn"><i class="fas fa-plus"></i> Adicionar slide</button>
+            </section>
+
+            <!-- BANNER -->
+            <section class="tab-panel" id="tab-banner">
+                <h2><i class="fas fa-flag"></i> Banner publicitário</h2>
+                <p>Texto exibido na área de anúncio do site (usado quando o AdSense ainda não carrega ou reservado para venda direta).</p>
+                <div class="field">
+                    <label for="bannerTag">Etiqueta</label>
+                    <input type="text" id="bannerTag" placeholder="PUBLICIDADE">
+                </div>
+                <div class="field">
+                    <label for="bannerTitle">Título</label>
+                    <input type="text" id="bannerTitle" placeholder="JSMuniz Publicidade">
+                </div>
+                <div class="field">
+                    <label for="bannerDesc">Descrição</label>
+                    <input type="text" id="bannerDesc" placeholder="Espaço reservado para o seu anúncio">
+                </div>
+                <div class="field">
+                    <label for="bannerCta">Texto do botão</label>
+                    <input type="text" id="bannerCta" placeholder="Anuncie aqui">
+                </div>
+            </section>
+
+            <!-- ACESSO -->
+            <section class="tab-panel" id="tab-acesso">
+                <h2><i class="fas fa-key"></i> Acesso &amp; Ajuda</h2>
+                <div class="help-box">
+                    <h3><i class="fas fa-user-shield"></i> Trocar usuário/senha</h3>
+                    <p>O login <strong>jsmunize</strong> / <strong>jojo7811</strong> funciona por segurança básica do Cloudflare. Para trocar (recomendado), acesse no Cloudflare:</p>
+                    <ol>
+                        <li>Workers &amp; Pages → seu site → <strong>Settings → Environment variables</strong></li>
+                        <li>Adicione <code>ADMIN_USER</code> e <code>ADMIN_PASS</code> com seus novos valores</li>
+                    </ol>
+                    <p><strong>Dica de segurança:</strong> use uma senha forte e mantenha o repositório do GitHub <u>privado</u>. As informações do site não ficam expostas no código — somente você tem acesso.</p>
+                </div>
+                <div class="help-box">
+                    <h3><i class="fas fa-database"></i> Onde os dados são salvos?</h3>
+                    <p>Em um banco <strong>Cloudflare KV</strong> (binding <code>SETTINGS</code>). Se aparecer erro "binding KV não configurado", veja o README do projeto: é preciso criar a KV e vincular em <strong>Settings → Bindings</strong>. Enquanto não configurado, o site usa os valores padrão.</p>
+                </div>
+                <div class="help-box">
+                    <h3><i class="fas fa-instagram"></i> Feed do Instagram</h3>
+                    <p>Depende das variáveis <code>INSTAGRAM_TOKEN</code> e <code>INSTAGRAM_USER_ID</code>. Veja o README para o passo a passo.</p>
+                </div>
+            </section>
+
+            <!-- SAVE BAR -->
+            <div class="save-bar">
+                <button class="btn btn-ghost" id="resetBtn"><i class="fas fa-undo"></i> Restaurar padrão</button>
+                <button class="btn btn-gradient" id="saveBtn">
+                    <span class="btn-label"><i class="fas fa-save"></i> Salvar alterações</span>
+                    <span class="btn-loading" hidden><i class="fas fa-spinner fa-spin"></i> Salvando...</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/config.js?v=1"></script>
+    <script src="../js/site-defaults.js?v=1"></script>
+    <script>const SITE_ADMIN = { apiSettings: '/api/settings', apiSave: '/api/admin/settings', home: '../' };</script>
+    <script src="js/admin.js?v=1"></script>
+</body>
+</html>

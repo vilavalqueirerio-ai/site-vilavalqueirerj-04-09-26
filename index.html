@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vila Valqueire RJ - Publicidade e serviços para empresas e pessoas físicas na Vila Valqueire, Rio de Janeiro. Anuncie aqui e alcance milhares de moradores.">
+    <meta name="keywords" content="Vila Valqueire, publicidade, anuncie aqui, propaganda, internet, marketing local, Rio de Janeiro, JSMuniz Publicidade">
+    <meta name="author" content="JSMuniz Publicidade">
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vila Valqueire RJ - Publicidade e Serviços">
+    <meta property="og:description" content="Sua empresa em destaque na Vila Valqueire. Publicidade profissional para empresas e pessoas físicas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vilavalqueirerj.com.br">
+    <meta property="og:site_name" content="Vila Valqueire RJ">
+
+    <title>Vila Valqueire RJ - Publicidade e Serviços | Rio de Janeiro</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+    <!-- PARTICLES BACKGROUND -->
+    <canvas id="particles"></canvas>
+
+    <!-- TOP BAR - Data, hora e clima -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span id="currentDate"></span>
+                <span class="sep">|</span>
+                <span id="currentTime"></span>
+            </div>
+            <div class="top-bar-right">
+                <span id="weatherInfo"><i class="fas fa-cloud-sun"></i> <span id="weatherText">Carregando clima...</span></span>
+                <span class="sep">|</span>
+                <span id="tempDisplay">--°C</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="brand">
+                <span class="brand-badge"><i class="fa-solid fa-location-dot"></i></span>
+                <span class="brand-text">Vila Valqueire<strong>RJ</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="#anuncie" class="btn btn-gradient btn-nav">Anuncie Aqui</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+        <div class="container hero-inner">
+            <div class="hero-badge reveal">
+                <i class="fa-brands fa-instagram"></i>
+                @vilavalqueirerj &nbsp;•&nbsp; Vila Valqueire - RJ
+            </div>
+            <h1 class="hero-title reveal">
+                Sua marca no coração da<br>
+                <span class="gradient-text">Vila Valqueire</span>
+            </h1>
+            <p class="hero-sub reveal">
+                Publicidade e serviços profissionais para empresas e pessoas físicas.
+                Do portal às redes sociais, sua empresa em destaque alcançando
+                milhares de moradores da região.
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#anuncie" class="btn btn-gradient btn-big"><i class="fas fa-bullhorn"></i> Quero Anunciar</a>
+                <a href="#servicos" class="btn btn-ghost btn-big"><i class="fas fa-layer-group"></i> Conheça os Serviços</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">100%</span>
+                    <span class="hero-stat-label">Conteúdo local</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num gradient-text">+Milhares</span>
+                    <span class="hero-stat-label">de moradores alcançados</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">24/7</span>
+                    <span class="hero-stat-label">Atendimento</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-marquee">
+            <div class="marquee-track">
+                <span>PUBLICIDADE</span><i class="fas fa-star"></i>
+                <span>PORTAL DE NOTÍCIAS</span><i class="fas fa-star"></i>
+                <span>INSTAGRAM</span><i class="fas fa-star"></i>
+                <span>MARKETING LOCAL</span><i class="fas fa-star"></i>
+                <span>CRIAÇÃO DE CONTEÚDO</span><i class="fas fa-star"></i>
+                <span>ANUNCIE AQUI</span><i class="fas fa-star"></i>
+                <span>PUBLICIDADE</span><i class="fas fa-star"></i>
+                <span>PORTAL DE NOTÍCIAS</span><i class="fas fa-star"></i>
+                <span>INSTAGRAM</span><i class="fas fa-star"></i>
+                <span>MARKETING LOCAL</span><i class="fas fa-star"></i>
+                <span>CRIAÇÃO DE CONTEÚDO</span><i class="fas fa-star"></i>
+                <span>ANUNCIE AQUI</span><i class="fas fa-star"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDER DE PUBLICIDADE -->
+    <section class="ad-slider-section container">
+        <div class="ad-label"><i class="fas fa-spray-can-sparkles"></i> Publicidade</div>
+        <div class="ad-slider" id="adSlider">
+            <div class="ad-slider-track" id="adSliderTrack"></div>
+            <button class="ad-slider-btn prev" id="adSliderPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="ad-slider-btn next" id="adSliderNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="ad-slider-dots" id="adSliderDots"></div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag"><i class="fas fa-bolt"></i> O que fazemos</span>
+                <h2 class="section-title">Serviços <span class="gradient-text">profissionais</span></h2>
+                <p class="section-desc">Tudo que sua empresa ou negócio precisa para brilhar na Vila Valqueire e na internet.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Publicidade no Portal</h3>
+                    <p>Banners e destaques no portal da Vila Valqueire, de frente para milhares de leitores da região.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <h3>Impulsionamento Instagram</h3>
+                    <p>Aumente seu alcance e seguidores com estratégias de conteúdo e impulsionamento profissional no @vilavalqueirerj.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Criação de Conteúdo</h3>
+                    <p>Artes, posts, stories e legenda que prendem a atenção e geram vendas para o seu negócio.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-video"></i></div>
+                    <h3>Cobertura de Eventos</h3>
+                    <p>Seu lançamento, aniversário ou evento coberto e divulgado em tempo real no portal e nas redes.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-map-pin"></i></div>
+                    <h3>Marketing Local</h3>
+                    <p>Posicionamento no Google, parcerias com o comércio e divulgação voltada para o seu público do bairro.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Divulgação para PF</h3>
+                    <p>Pessoas físicas também anunciam: serviços, vendas, achados e perdidos, eventos particulares e mais.</p>
+                    <a href="#anuncie" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section section-dark" id="instagram">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag"><i class="fa-brands fa-instagram"></i> Ao vivo</span>
+                <h2 class="section-title">Nosso <span class="gradient-text">Instagram</span></h2>
+                <p class="section-desc">Acompanhe tudo o que acontece na Vila Valqueire. As postagens abaixo são sincronizadas automaticamente.</p>
+            </div>
+            <div class="ig-header reveal">
+                <div class="ig-avatar"><i class="fa-brands fa-instagram"></i></div>
+                <div class="ig-profile">
+                    <span class="ig-handle">@vilavalqueirerj</span>
+                    <span class="ig-status" id="igStatus">Sincronizando feed...</span>
+                </div>
+                <a href="https://www.instagram.com/vilavalqueirerj" target="_blank" rel="noopener" class="btn btn-gradient btn-small"><i class="fa-brands fa-instagram"></i> Seguir</a>
+            </div>
+            <div class="ig-grid" id="igGrid">
+                <div class="ig-empty" id="igEmpty">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Carregando postagens...</p>
+                </div>
+            </div>
+            <div class="ig-footer reveal">
+                <a href="https://www.instagram.com/vilavalqueirerj" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-instagram"></i> Ver tudo no Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACOTES -->
+    <section class="section" id="pacotes">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag"><i class="fas fa-tags"></i> Planos sob medida</span>
+                <h2 class="section-title">Pacotes de <span class="gradient-text">Publicidade</span></h2>
+                <p class="section-desc">Escolha o pacote ideal para o seu negócio. Todos com atendimento personalizado e resultados medidos.</p>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card reveal">
+                    <div class="plan-header">
+                        <span class="plan-name">Básico</span>
+                        <span class="plan-price">R$ 99<small>/mês</small></span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 1 post no Instagram</li>
+                        <li><i class="fas fa-check"></i> Banner no portal (1 mês)</li>
+                        <li><i class="fas fa-check"></i> Citação em 1 matéria</li>
+                        <li><i class="fas fa-check"></i> Relatório de alcance</li>
+                    </ul>
+                    <a href="https://wa.me/552124534420?text=Ol%C3%A1!%20Quero%20o%20pacote%20B%C3%81SICO%20de%20publicidade" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero este plano</a>
+                </div>
+                <div class="plan-card plan-featured reveal">
+                    <span class="plan-badge"><i class="fas fa-crown"></i> MAIS ESCOLHIDO</span>
+                    <div class="plan-header">
+                        <span class="plan-name">Profissional</span>
+                        <span class="plan-price">R$ 199<small>/mês</small></span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 4 posts + 4 stories no Instagram</li>
+                        <li><i class="fas fa-check"></i> Banner em destaque no portal</li>
+                        <li><i class="fas fa-check"></i> Matéria especial sobre a empresa</li>
+                        <li><i class="fas fa-check"></i> Impulsionamento local</li>
+                        <li><i class="fas fa-check"></i> Relatório mensal de resultados</li>
+                    </ul>
+                    <a href="https://wa.me/552124534420?text=Ol%C3%A1!%20Quero%20o%20pacote%20PROFISSIONAL%20de%20publicidade" target="_blank" rel="noopener" class="btn btn-gradient btn-block">Quero este plano</a>
+                </div>
+                <div class="plan-card reveal">
+                    <div class="plan-header">
+                        <span class="plan-name">Premium</span>
+                        <span class="plan-price">R$ 349<small>/mês</small></span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 8 posts + 8 stories no Instagram</li>
+                        <li><i class="fas fa-check"></i> Banner principal + lateral no portal</li>
+                        <li><i class="fas fa-check"></i> Cobertura de 1 evento exclusivo</li>
+                        <li><i class="fas fa-check"></i> Impulsionamento reforçado</li>
+                        <li><i class="fas fa-check"></i> Criação de conteúdo completa</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário no WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/552124534420?text=Ol%C3%A1!%20Quero%20o%20pacote%20PREMIUM%20de%20publicidade" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero este plano</a>
+                </div>
+            </div>
+            <p class="plans-note reveal"><i class="fas fa-info-circle"></i> Valores ilustrativos. Fale conosco para um orçamento personalizado para o seu negócio.</p>
+        </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="section section-dark" id="resultados">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag"><i class="fas fa-chart-line"></i> Números que falam</span>
+                <h2 class="section-title">Nossa <span class="gradient-text">presença</span></h2>
+            </div>
+            <div class="counters-grid">
+                <div class="counter reveal">
+                    <span class="counter-num" data-target="100" data-suffix="%">0%</span>
+                    <span class="counter-label">Presença local</span>
+                </div>
+                <div class="counter reveal">
+                    <span class="counter-num gradient-text" data-target="50" data-prefix="+">+0</span>
+                    <span class="counter-label">Anunciantes ativos</span>
+                </div>
+                <div class="counter reveal">
+                    <span class="counter-num gradient-text" data-target="100" data-suffix="%">0%</span>
+                    <span class="counter-label">Conteúdo próprio</span>
+                </div>
+                <div class="counter reveal">
+                    <span class="counter-num gradient-text" data-target="7" data-suffix="/7">0/7</span>
+                    <span class="counter-label">Atendimento na semana</span>
+                </div>
+            </div>
+            <div class="testimonials" id="testimonials">
+                <div class="testimonial reveal">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p>"Minha loja nunca esteve tão movimentada. As divulgações na página e no portal trouxeram clientes novos toda semana."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-store"></i></div>
+                        <div><strong>Comércio local</strong><span>Cliente Profissional</span></div>
+                    </div>
+                </div>
+                <div class="testimonial reveal">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p>"Profissionalismo e agilidade. Em poucos dias meu serviço já era conhecido no bairro inteiro."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+                        <div><strong>Autônomo</strong><span>Cliente Básico</span></div>
+                    </div>
+                </div>
+                <div class="testimonial reveal">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p>"O pacote Premium valeu cada centavo. Cobertura do meu evento no portal e no Instagram, tudo em tempo real."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-cake-candles"></i></div>
+                        <div><strong>Evento particular</strong><span>Cliente Premium</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA ANUNCIE -->
+    <section class="cta-section" id="anuncie">
+        <div class="cta-blob cta-blob-1"></div>
+        <div class="cta-blob cta-blob-2"></div>
+        <div class="container cta-inner">
+            <div class="cta-icon reveal"><i class="fas fa-bullhorn"></i></div>
+            <h2 class="cta-title reveal">Seu anúncio pode estar <span class="gradient-text">aqui</span></h2>
+            <p class="cta-desc reveal">Precisa de visibilidade? Fale agora com a nossa equipe e descubra o melhor pacote para o seu negócio.</p>
+            <div class="cta-actions reveal">
+                <a href="https://wa.me/552124534420?text=Ol%C3%A1!%20Quero%20anunciar%20na%20Vila%20Valqueire" target="_blank" rel="noopener" class="btn btn-gradient btn-big"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
+                <a href="tel:+552124534420" class="btn btn-ghost btn-big"><i class="fas fa-phone"></i> (21) 2453-4420</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER PUBLICITÁRIO (GOOGLE ADSENSE) -->
+    <section class="ad-banner container">
+        <div class="ad-label">Publicidade</div>
+        <div class="ad-container" id="adMain">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <div class="ad-fallback">
+                <div class="ad-fallback-content">
+                    <span class="ad-tag" id="bannerFallbackTag">PUBLICIDADE</span>
+                    <p><strong id="bannerFallbackTitle">JSMuniz Publicidade</strong></p>
+                    <p id="bannerFallbackDesc">Espaço reservado para o seu anúncio</p>
+                    <a href="https://wa.me/552124534420" class="btn btn-gradient btn-small" target="_blank" rel="noopener" id="bannerFallbackCta">Anuncie aqui</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / FOOTER -->
+    <footer class="footer" id="contato">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="brand">
+                    <span class="brand-badge"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="brand-text">Vila Valqueire<strong>RJ</strong></span>
+                </a>
+                <p>Publicidade e serviços profissionais para empresas e pessoas físicas. Vale a pena anunciar na Vila Valqueire!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/vilavalqueirerj" target="_blank" title="Instagram" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/vilavalqueirenews" target="_blank" title="Facebook" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@vilavalqueirenews" target="_blank" title="YouTube" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/552124534420" target="_blank" title="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#servicos">Publicidade no Portal</a></li>
+                    <li><a href="#servicos">Impulsionamento Instagram</a></li>
+                    <li><a href="#servicos">Criação de Conteúdo</a></li>
+                    <li><a href="#servicos">Cobertura de Eventos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#servicos">Sobre nós</a></li>
+                    <li><a href="#pacotes">Pacotes</a></li>
+                    <li><a href="#anuncie">Anuncie</a></li>
+                    <li><a href="#" id="privacyLink">Política de Privacidade</a></li>
+                    <li><a href="#" id="termsLink">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-building"></i> JSMuniz Publicidade</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Vila Valqueire - RJ</li>
+                    <li><i class="fas fa-phone"></i> (21) 2453-4420</li>
+                    <li><i class="fas fa-envelope"></i> vilavalqueirenews@gmail.com</li>
+                    <li><i class="fa-brands fa-instagram"></i> @vilavalqueirerj</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vila Valqueire RJ - Todos os direitos reservados.</p>
+                <p>Propriedade de <strong>JSMuniz Publicidade</strong> | Vila Valqueire, Rio de Janeiro | <a href="/admin/" style="color:#5b5470;text-decoration:none;font-size:0.8rem;">Administração</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY AD -->
+    <div class="sticky-bottom-ad" id="stickyBottomAd">
+        <button class="close-sticky" id="closeSticky"><i class="fas fa-times"></i></button>
+        <div class="ad-label">Publicidade</div>
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:50px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/552124534420" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCROLL TOP -->
+    <button class="scroll-top" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/config.js?v=1"></script>
+    <script src="js/site-defaults.js?v=1"></script>
+    <script src="js/main.js?v=1"></script>
+</body>
+</html>

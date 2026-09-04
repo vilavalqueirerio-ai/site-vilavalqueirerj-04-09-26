@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Área Restrita - Vila Valqueire RJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css?v=1">
+</head>
+<body class="login-body">
+    <div class="login-bg"></div>
+    <main class="login-card">
+        <div class="login-logo">
+            <span class="login-badge"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="login-brand">Vila Valqueire<strong>RJ</strong></span>
+        </div>
+        <h1 class="login-title">Área do Administrador</h1>
+        <p class="login-desc">Entre para gerenciar as cores, o slider e o banner do site.</p>
+        <form id="loginForm" autocomplete="off">
+            <div class="field">
+                <label for="user"><i class="fas fa-user"></i> Usuário</label>
+                <input type="text" id="user" placeholder="Digite o usuário" required>
+            </div>
+            <div class="field">
+                <label for="pass"><i class="fas fa-lock"></i> Senha</label>
+                <input type="password" id="pass" placeholder="Digite a senha" required>
+            </div>
+            <p class="login-error" id="loginError"></p>
+            <button type="submit" class="btn btn-gradient btn-block" id="loginBtn">
+                <span class="btn-label"><i class="fas fa-sign-in-alt"></i> Entrar</span>
+                <span class="btn-loading" hidden><i class="fas fa-spinner fa-spin"></i> Verificando...</span>
+            </button>
+        </form>
+        <a href="../" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao site</a>
+    </main>
+    <script src="../js/config.js?v=1"></script>
+    <script>const SITE_ADMIN = { apiAuth: '/api/admin/auth', home: '../' };</script>
+    <script src="js/admin.js?v=1"></script>
+</body>
+</html>
