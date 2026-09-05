@@ -1,0 +1,13 @@
+# Arquivos que NAO devem ser servidos publicamente
+/.git
+/.gitignore
+/.assetsignore
+/wrangler.jsonc
+/functions
+/dist
+/.wrangler
+/README.md
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store

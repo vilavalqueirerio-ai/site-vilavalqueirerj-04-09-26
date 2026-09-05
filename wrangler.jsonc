@@ -1,0 +1,15 @@
+{
+  // Empurra o deploy do repo como projeto Pages-com-functions.
+  // Quando a integração Git do Cloudflare roda `npx wrangler deploy`,
+  // esta config faz o wrangler servir os assets ESTÁTICOS da raiz
+  // e usar o Worker compilado (dist/worker/index.js) para as rotas /api/*.
+  "name": "site-vilavalqueirerj-04-09-26",
+  "compatibility_date": "2026-09-05",
+  "main": "./dist/worker/index.js",
+  "assets": {
+    "directory": "."
+  },
+  "observability": {
+    "enabled": true
+  }
+}
